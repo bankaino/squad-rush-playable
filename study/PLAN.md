@@ -40,7 +40,6 @@
 - HUD (hud.js): barrel HP on the front face, value on the gate glass, weapon tags, squad pill with helmet glyph, boss bar over its head + 2 damage pops, thin boss-progress strip (squad -> skull), CHOOSE YOUR WEAPON banner, callouts, hand, endcard (two-colour logo, stars on win, survivors cheering, headline by result). Score pill removed
 - Sound (audio.js): procedural SFX for every event, gun bed only with a target in range (ducked by rewards/kills), compressor, CTA blip, mute on hidden page / network hooks. Written from code; NOT listened to
 - Scene: 24 CC0 rigs, horde = 96 sim enemies x3 decor chibis (culled when > 20 m ahead), flashes/tracers tuned, boss entrance + death payoff, saturated gates
-- Gate B: critic 4 -> 5.5 -> 6.8 (juice 6.5, visuals 6.5; target 7 NOT confirmed after round 2, see study/critique/gateB2.md "Applied")
 - tuned in sim: WAVE_N 96/WAVE_D 5300/WAVE_TRIG 2100/EN_STEER 0.15, GATE_STEP 8, MINI_HP 66, BOSS_REACH 320, boss first cooldown 0.3 s, CC0_MAX 24
 
 ## Phase 4 DONE (verify.sh all: VERIFY OK for default + 3 variants; 1.02 MB per HTML network, google.zip 0.33 MB, meta 1.02 MB of 2; 61 fps)
@@ -52,4 +51,4 @@
 - OPEN for the user: real store URLs in tools/build.json (placeholders now), a listening pass on the sound, an independent re-score after the last fix round
 
 ## Phases
-- [x] 0 scaffold  - [x] 1 rules (sim) + casual + graybox  - [x] 2 world + models (Gate A: critic 4/10 → round-1 fixes applied, see study/critique/gateA.md)  - [x] 3 feel + HUD + sound (Gate B: 6.8/10 last measured)  - [x] 4 variants + delivery
+- [x] 0 scaffold  - [x] 1 rules (sim) + casual + graybox  - [x] 2 world + models  - [x] 3 feel + HUD + sound  - [x] 4 variants + delivery
