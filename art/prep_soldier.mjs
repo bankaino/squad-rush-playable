@@ -1,9 +1,9 @@
 // prep_soldier.mjs — Quaternius "Character Soldier" (CC0) → art/models_raw/soldier/soldier_prep.glb
-//   node art/prep_soldier.mjs      (run from the project root; needs the skill's node_modules via NODE_PATH-free import below)
+//   node art/prep_soldier.mjs      (run from the project root; TOOLKIT_DIR = a folder whose node_modules has @gltf-transform/core|extensions|functions, meshoptimizer, three, sharp)
 // Drops the 14 built-in rigid weapons + shoulder pads (our guns are procedural pools that follow the hand bone) so the model
 // is ONE skinned primitive (1 draw). Prints the attach transform of the original AK (local to bone Index1.R) for scene.js.
 import { createRequire } from 'node:module'; import os from 'node:os'; import path from 'node:path';
-const req = createRequire(path.join(os.homedir(), '.claude/skills/ref2playable3d/package.json'));
+const req = createRequire(path.join(process.env.TOOLKIT_DIR || process.cwd(), 'package.json'));
 const { NodeIO } = req('@gltf-transform/core'), { ALL_EXTENSIONS } = req('@gltf-transform/extensions'), { MeshoptDecoder } = req('meshoptimizer');
 const { prune } = req('@gltf-transform/functions'), THREE = req('three');
 await MeshoptDecoder.ready;

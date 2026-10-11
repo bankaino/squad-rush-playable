@@ -1,6 +1,6 @@
 // record_media.mjs — records the attract demo frame by frame (SCENE.render(t) → small JPEG), for docs/media. Not part of the build.
 import { createRequire } from 'node:module'; import os from 'node:os'; import path from 'node:path'; import fs from 'node:fs'; import http from 'node:http';
-const { chromium } = createRequire(import.meta.url)(path.join(os.homedir(), '.claude/skills/ref2game/scripts/node_modules/playwright'));
+const { chromium } = createRequire(import.meta.url)(process.env.PLAYWRIGHT || 'playwright');
 const root = process.cwd(), types = { '.html': 'text/html', '.js': 'text/javascript', '.glb': 'model/gltf-binary', '.json': 'application/json', '.png': 'image/png' };
 const srv = http.createServer((q, r) => { const f = path.join(root, decodeURIComponent(q.url.split('?')[0])); fs.readFile(f, (e, d) => { if (e) { r.writeHead(404); r.end(); return; } r.writeHead(200, { 'content-type': types[path.extname(f)] || 'application/octet-stream' }); r.end(d); }); });
 await new Promise((r) => srv.listen(0, '127.0.0.1', r));

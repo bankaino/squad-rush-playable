@@ -1,7 +1,6 @@
 # Squad Rush — план 3D-плейабла (по референсам Top War: Battle Game)
 
-Задание для модели-исполнителя (Sonnet). Скилл: **ref2playable3d** (`~/.claude/skills/ref2playable3d`, дальше `<S>`;
-`<R>` = `~/.claude/skills/ref2game/scripts`). Перед началом прочитай `<S>/SKILL.md` и `<S>/references/ad-rules.md`.
+Задание для модели-исполнителя (Sonnet). Работа ведётся собственными скиллами (в репозиторий не входят).
 Проект: корень репозитория. Референсы: `study/ref/1.webp 2.webp 3.png 4.png`.
 Готовый код прошлого проекта для подглядывания (env map, ACES, rim light, ghost play, `SIM.build()`):
 соседний проект spire-smash (отдельный репозиторий) (`live/scene.js`, `live/sim.js`, `tools/build_playable.py`).
@@ -155,7 +154,7 @@
 
 **CC0-солдат (фаза 2, первый шаг).**
 1. **Спроси пользователя** перед скачиванием: файл «Character Soldier» (Quaternius), poly.pizza/m/PpLF4rt4ah, CC0 1.0, GLB 1.33 MB, 7929 tris, анимированный.
-2. `python3 <S>/scripts/polypizza.py get PpLF4rt4ah art/models_raw/soldier`.
+2. `python3 polypizza.py get PpLF4rt4ah art/models_raw/soldier`.
 3. Выведи имена клипов и костей (короткий node-скрипт на GLTFLoader или `npx gltf-transform inspect`).
 4. Сопоставь роли в `scene.js` `const CLIP = {...}`:
    - RUN — бег со стрельбой (`Run_Shoot`/`Run_Gun`/`Run`);
@@ -166,7 +165,7 @@
    - WALK — босс;
    - ATTACK — удар босса.
    Не больше 6–7 клипов.
-5. `node <S>/scripts/model.mjs art/models_raw/soldier/<file>.glb live/models/soldier.glb --clips <...> --tris 3000` → цель ≤ 260 KB.
+5. `node model.mjs art/models_raw/soldier/<file>.glb live/models/soldier.glb --clips <...> --tris 3000` → цель ≤ 260 KB.
 6. Запасные варианты:
    - Quaternius «SWAT» (poly.pizza/m/Btfn3G5Xv4, CC0, 1.56 MB) — тоже спросить;
    - на крайний случай — шаблонный `worker.glb` (CC0, уже в проекте) с перекраской и процедурной каской.
@@ -326,8 +325,8 @@
 
 Готово, когда:
 - `probe.mjs` в бюджете §3;
-- контакт-шит `probe.mjs --shots frames/probe` → `<R>/sheet.py ... --w 300` — единственный раз, когда смотришь картинки;
-- критик (sonnet, в фоне, бриф `<S>/references/critic-brief.md`) дал отчёт `study/critique/gateA.md`;
+- контакт-шит `probe.mjs --shots frames/probe` → `sheet.py ... --w 300` — единственный раз, когда смотришь картинки;
+- критик (sonnet, в фоне, бриф критика) дал отчёт `study/critique/gateA.md`;
 - топ-фиксы применены.
 
 **Фаза 3 — HUD, звук, сочность (Gate B).**
@@ -348,7 +347,7 @@
 
 ## 6. Правила для исполнителя
 
-- Экономия токенов из SKILL.md обязательна:
+- Экономия токенов обязательна:
   - мелкие `Edit`, не перечитывать только что записанное;
   - картинки — только на гейтах (один даунскейл-шит);
   - числа — через `verify.sh`, `probe.mjs`, `casual.mjs`.
