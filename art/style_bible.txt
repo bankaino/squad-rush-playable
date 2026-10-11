@@ -1,0 +1,11 @@
+SQUAD RUSH — style bible (measured / chosen from study/ref 1-4: Top War: Battle Game ad frames; own brand, no foreign logos)
+World   : red suspension bridge over a bright sea, seen from behind-above. Road #80868F with white edge lines + dashed centre, curbs #C9CED6,
+          rails/towers/cables #C8352B (shade #B02E25), steel deck #6D737D, sea #2A7FC4 with light ripples, sky #7FBFF0 -> #D9ECF7, fog #CFE6F5 34..100 m.
+Teams   : blue squad = helmet/vest #2F7DE1, pants #2E5FB8, dark gear → slate-navy; red crowd = helmet #D93A2F, tank #E8C9A0, shorts #B8322A.
+          boss = same CC0 rig x1.9, red jacket #C73A30, dark pants #2A2A35, blond spikes #F2B640. Dead enemies rise as white translucent ghosts (ref 1).
+Props   : barrels #C0773A/#A9652F staves, steel hoops #8A8F99; gates = white frame + glass tinted red #FF3B30 (negative) → blue #3BA0FF (positive); weapon pickups spin with a green #3DFF6A outline.
+Light   : hemisphere #BFE3FF/#6B7380 0.95 + sun #FFF1DC 2.3 from upper-left-front + cool back light 0.9, ACES 1.05, PMREM sky env (rigs only); blob shadows, one shadow caster (boss).
+Camera  : behind-above, pitch 0.84 rad (48 deg), FOV 45, distance 17 m / zoom (zoom 1 -> 0.9 as the squad grows, 0.88 in the arena), look point 3.3 m ahead of the squad.
+          Road fills the width; squad centre at ~72-76 % of the view height; ~17 m of road visible ahead of the squad.
+Scale   : 1 sim px = 1 cm; soldier ~1.26 m (rig scale 0.72), boss ~4.4 m (x2.5); hero (squad) 18-24 % of the view height in combat, ~5 % for the lone soldier at the start (by design).
+Budget  : draws <= 37, tris <= 83k measured (limits 75 / 250k); build ~0.92 MB.

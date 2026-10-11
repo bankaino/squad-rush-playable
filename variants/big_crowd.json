@@ -1,0 +1,2 @@
+{ "hypothesis": "Gates climb faster (+1 per 7 hits instead of 10): a bigger squad (median 17 -> 20 at the boss) sells the crowd fantasy and is much easier (it is the old, easy default). Casual model: win 37 -> 58 %; good player 80 -> 100 %.",
+  "K": { "GATE_STEP": 7 } }

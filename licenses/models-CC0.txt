@@ -1,0 +1,11 @@
+3D models used in the build (both CC0 1.0 — public domain, no attribution required; listed here for transparency)
+
+1. Character Soldier — Quaternius — https://poly.pizza/m/PpLF4rt4ah
+   Squad, recruits, endcard hero. Prepared with art/prep_soldier.mjs (14 built-in weapons and shoulder pads removed,
+   head welded to the skeleton) and compressed by the ref2playable3d model.mjs -> live/models/soldier.glb (118 KB, 7 clips).
+2. Giant — Quaternius — https://poly.pizza/m/BldaiPtyJa
+   The boss. Compressed to live/models/giant.glb (67 KB, 6 clips); the skin colour is recoloured at runtime (live/scene.js, recolor()).
+
+The original downloads are NOT in the repository (art/models_raw/ is git-ignored): fetch them with
+`python3 polypizza.py get <id> art/models_raw/<name>` from the ref2playable3d skill if you want to re-run the preparation.
+Everything else (bridge, road, sea, barrels, gates, guns, red crowd, effects, HUD glyphs, sound) is procedural code.

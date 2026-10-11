@@ -1,0 +1,2 @@
+{ "hypothesis": "Rigged near-win: the boss always survives with ~7 % HP and wipes the squad (\"BOSS HAD 7% LEFT!\"). Do 'so close' viewers click more than winners? Model: win 0 %, lose 100 %, endcard at ~25 s.",
+  "K": { "FAKE_FAIL": true, "RAGE_KILL": 8, "RAGE_CD": 0.3, "RAGE_AT": 0.3 } }

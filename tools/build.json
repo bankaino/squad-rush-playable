@@ -1,0 +1,17 @@
+{
+  "title": "Squad Rush",
+  "store": {
+    "android": "https://play.google.com/store/apps/details?id=com.example.squadrush",
+    "ios": "https://apps.apple.com/app/id0000000000"
+  },
+  "images": {
+    "hand": [
+      272,
+      "alpha"
+    ]
+  },
+  "models": {
+    "soldier": "Character Soldier by Quaternius, CC0 1.0 (poly.pizza/m/PpLF4rt4ah); weapons/shoulder pads removed, head welded to the skeleton (art/prep_soldier.mjs); clips Run_Gun Idle_Shoot Death HitReact Wave Run Punch",
+    "giant": "Giant by Quaternius, CC0 1.0 (poly.pizza/m/BldaiPtyJa); boss; clips Attack Death HitRecieve Idle Run Walk; skin recoloured at runtime"
+  }
+}
